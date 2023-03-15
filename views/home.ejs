@@ -6,8 +6,8 @@
 
 <% posts.forEach(post => { %>
     <h1><%=  post.title  %></h1>
-    <% let url = ("/posts/" + post.title).replace(/\s/g,"-"); %>
-    <p><%=  post.content.substring(0,97) + "..." %>
+    <% let url = ("/posts/" + post._id); %>
+    <p><%=  post.post.substring(0, 97) + "..." %>
         <a class="link-secondary" role="button" href="<%=url%>" + post.title>Read more</a>
     </p>
 <% }) %>
